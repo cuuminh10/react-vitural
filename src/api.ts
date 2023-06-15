@@ -4,8 +4,7 @@ const development = !process.env.NODE_ENV || process.env.NODE_ENV === 'developme
 
 let baseURL = "http://125.212.237.162:9000/api/v1"
 if (!development)
-    baseURL = "https://basicemployeedirectorywebapi.azurewebsites.net/api"
-
+    baseURL = "http://125.212.237.162:9000/api/v1"
 
 export default axios.create({
     baseURL
