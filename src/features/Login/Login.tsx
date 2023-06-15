@@ -64,7 +64,7 @@ export const Login: React.FC = () => {
 
   return (
     <div className="form-container">
-      <h1 className="title">Links</h1>
+      <h1 className="title">Login</h1>
       <div className="card">
         <div className="card-content">
           <div className="content">
@@ -88,7 +88,7 @@ export const Login: React.FC = () => {
               <div className="column is-3">&nbsp;</div>
               <div className="column is-6">
                 <Input
-                  type="text"
+                  type="password"
                   title="PASSWORD"
                   name="password"
                   placeholder="Enter Password"
@@ -103,7 +103,7 @@ export const Login: React.FC = () => {
             <div className="columns">
               <div className="column is-3"></div>
               <div className="column is-6">
-                <Button type="is-warning" title="Delete" onClick={submit} width={100}/>
+                <Button type="is-warning" title="Submit" onClick={submit} width={100}/>
               </div>
               <div className="column is-3"></div>
             </div>

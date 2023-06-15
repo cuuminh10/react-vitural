@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { loginLink } from "./auth-api";
+import { authLogout, loginLink } from "./auth-api";
 
 export const loginSlice = createSlice({
     name: "auth",
     initialState: {
+        isLogin: true,
         list: {
             isLoading: false,
             status: "",
@@ -28,10 +29,12 @@ export const loginSlice = createSlice({
             state.list.status = "success"
             state.list.values = payload
             state.list.isLoading = false
+            state.isLogin = true
         },
         [loginLink.rejected.type]: (state, action) => {
             state.list.status = "failed"
             state.list.isLoading = false
+            
         },
     }
 })

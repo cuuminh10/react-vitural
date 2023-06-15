@@ -10,7 +10,7 @@ export const pages: Page[] = [
   {
     path: '/',
     exact: true,
-    component: Employee,
+    component: Login,
   },
   {
     path: '/link',

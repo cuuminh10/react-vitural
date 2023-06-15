@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { addEmployee, deleteEmployee, getEmployees, updateEmployee } from "./employeeApi";
+import { addEmployee, deleteEmployee, findLink, getEmployees, updateEmployee } from "./employeeApi";
 
 export const employeeSlice = createSlice({
     name: "employee",
@@ -12,7 +12,7 @@ export const employeeSlice = createSlice({
         save: {
             isSaving: false,
             isDeleting: false
-        }
+        },
     },
     reducers: {
         clearSuccessMessage: (state, payload) => {
@@ -59,7 +59,7 @@ export const employeeSlice = createSlice({
         },
         [deleteEmployee.rejected.type]: (state, action) => {
             state.save.isDeleting = false
-        }
+        },
     }
 })
 

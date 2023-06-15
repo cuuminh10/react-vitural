@@ -11,7 +11,11 @@ export const loginLink = createAsyncThunk("auth/login", async (user: IUser) => {
         }
 
         return response.data
-    } catch (error) {
+    } catch (error: any) {
         console.log(error)
     }
+})
+
+export const authLogout = createAsyncThunk("auth/logout", async () => {
+   return {};
 })

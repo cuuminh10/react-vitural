@@ -1,11 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import employeeSlice from "./features/Employee/employeeSlice";
+import { authLogout } from "./features/Login/auth-api";
 import loginSlice from "./features/Login/loginSlice";
 
 
 const AuthHoang= (store: any) => (next: any) => (action: any) => {
-  console.log(action);
+
+  if (action?.error) {
+    // store.dispatch(authLogout())
+  }
 
   return next(action);
 };

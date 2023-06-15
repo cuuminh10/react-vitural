@@ -198,8 +198,8 @@ export const Employee: React.FC = () => {
                     {employeeList?.map((d: ILink, index: number) => {
                       return (
                         <tr key={index}>
-                          <td onClick={() => {history.push(`/webview?path=${d.link}`)}}>{d.id}</td>
-                          <td onClick={() => {history.push(`/webview?path=${d.link}`)}}>{d.link}</td>
+                          <td onClick={() => {history.push(`/webview?path=${d.shortLink}`)}}>{d.id}</td>
+                          <td onClick={() => {history.push(`/webview?path=${d.shortLink}`)}}>{d.link}</td>
                           <td>{d.shortLink}</td>
                           <td>
                             <Button
